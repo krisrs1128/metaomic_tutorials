@@ -19,5 +19,5 @@ export line=1
 export f=$(sed -n "$line p" SRR_Acc_List.txt)
 prefetch $f
 fastq-dump $f
-humann -i $f -o $f_processed
+humann -i ${f}.fastq -o ${f}_processed
 ```

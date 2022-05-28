@@ -1,5 +1,11 @@
-
-
-dockerfile: biobakery/humann
-
-queue
+universe = docker
+docker_image = krisrs1128/metaomic:05282022
+log = /home/ksankaran/logs/metaomic-$(Process).log
+error = /home/ksankaran/logs/metaomic-$(Process).err
+output = /home/ksankaran/logs/metaomic-$(Process).out
+executable = process_sample.sh
+environment = "id=$(Process)"
+request_cpus = 1
+request_memory = 1GB
+request_disk = 500MB
+queue 542 # number of rows of SRR file
