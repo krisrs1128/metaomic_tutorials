@@ -3,6 +3,7 @@ docker_image = krisrs1128/metaomic:05282022
 log = /home/ksankaran/logs/metaomic-$(Process).log
 error = /home/ksankaran/logs/metaomic-$(Process).err
 output = /home/ksankaran/logs/metaomic-$(Process).out
+transfer_input_files = SRR_Acc_List.txt,/staging/ksankaran/humann_databases.tar.gz
 executable = process_sample.sh
 environment = "id=$(Process)"
 request_cpus = 1

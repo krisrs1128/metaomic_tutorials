@@ -1,3 +1,6 @@
 
-conda install -c conda install humann -c biobakery
-#conda install -c bioconda python=3.7 metaphlan
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --add channels biobakery
+conda install humann -c biobakery
