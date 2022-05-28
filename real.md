@@ -13,3 +13,11 @@ done < SRR_Acc_List.txt
 Notice that we had to use the `fastq-dump` tool from this
 [toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software), and
 permissions issues had to be resolved by going to System Preferences > Security > General.
+
+```
+export line=1
+export f=$(sed -n "$line p" SRR_Acc_List.txt)
+prefetch $f
+fastq-dump $f
+humann -i $f -o $f_processed
+```
