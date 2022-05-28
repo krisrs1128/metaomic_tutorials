@@ -38,12 +38,13 @@ humann_join_tables -i output_name -o output_name_genefamilies.tsv --file_name ge
 If we want to upgrade various databases,
 
 ```
-humann_databases --download chocophlan full /path/to/databases --update-config yes
-humann_databases --download uniref uniref90_diamond /path/to/databases --update-config yes
-humann_databases --download utility_mapping full /path/to/databases --update-config yes
+export db_path=/Users/ksankaran/miniconda3/envs/humann/lib/python3.9/site-packages/humann/data/
+humann_databases --download chocophlan full $db_path --update-config yes
+humann_databases --download uniref uniref90_diamond $db_path --update-config yes
+humann_databases --download utility_mapping full $db_path --update-config yes
 ```
 
-To find the paths...
+To find the paths, use `humann_config`
 
 ### Example output
 
