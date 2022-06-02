@@ -3,10 +3,10 @@ docker_image = krisrs1128/metaomic:05282022
 log = /home/ksankaran/logs/metaomic-$(Process).log
 error = /home/ksankaran/logs/metaomic-$(Process).err
 output = /home/ksankaran/logs/metaomic-$(Process).out
-transfer_input_files = SRR_Acc_List.txt,/staging/ksankaran/humann_databases.tar.gz
+transfer_input_files = ../data/SRR_Acc_List.txt,/staging/ksankaran/databases/full_chocophlan.v296_201901b.tar.gz,/staging/ksankaran/databases/full_mapping_v201901b.tar.gz,/staging/ksankaran/databases/uniref90_annotated_v201901b_full.tar.gz
 executable = process_sample.sh
 environment = "id=$(Process)"
 request_cpus = 1
 request_memory = 1GB
-request_disk = 500MB
-queue 10 # 542 = number of rows of SRR file
+request_disk = 50GB
+#queue # 542 = number of rows of SRR file
