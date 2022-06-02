@@ -1,5 +1,5 @@
 universe = docker
-docker_image = krisrs1128/metaomic:20220602
+docker_image = biobakery/humann:3.0.0
 log = /home/ksankaran/logs/metaomic-$(Process).log
 error = /home/ksankaran/logs/metaomic-$(Process).err
 output = /home/ksankaran/logs/metaomic-$(Process).out
