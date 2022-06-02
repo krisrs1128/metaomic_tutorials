@@ -9,4 +9,5 @@ environment = "id=$(Process)"
 request_cpus = 1
 request_memory = 1GB
 request_disk = 100GB
+requirements = (Target.HasCHTCStaging == true)
 queue

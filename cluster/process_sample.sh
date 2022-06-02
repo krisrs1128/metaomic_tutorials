@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # copy over the data
-export db_path=/staging/ksankaran/databases
+export db_path=/staging/ksankaran/databases/
 cp $db_path/full_chocophlan.v296_201901b.tar.gz .
 cp $db_path/full_mapping_v201901b.tar.gz .
 cp $db_path/uniref90_annotated_v201901b_full.tar.gz .
@@ -14,6 +14,7 @@ tar -zxvf uniref90_annotated_v201901b_full.tar.gz
 wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.0.0/sratoolkit.3.0.0-ubuntu64.tar.gz
 tar -zxvf sratoolkit.3.0.0-ubuntu64.tar.gz
 export PATH=$PATH:sratoolkit.3.0.0-ubuntu64/bin
+echo "Aexyo" | vdb-config -i
 
 export f=$(sed -n "$((id + 1)) p" SRR_Acc_List.txt)
 prefetch $f
