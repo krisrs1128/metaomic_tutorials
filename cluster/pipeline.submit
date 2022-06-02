@@ -9,4 +9,4 @@ environment = "id=$(Process)"
 request_cpus = 1
 request_memory = 1GB
 request_disk = 50GB
-queue # 542 = number of rows of SRR file
+queue
